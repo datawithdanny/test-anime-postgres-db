@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS anime_list;
+CREATE TABLE anime_list (
+  anime_id INTEGER,
+  title TEXT,
+  title_english TEXT,
+  title_japanese TEXT,
+  title_synonyms TEXT,
+  image_url TEXT,
+  "type" TEXT,
+  source TEXT,
+  episodes INTEGER,
+  status TEXT,
+  airing TEXT,
+  aired_string TEXT,
+  aired TEXT,
+  duration TEXT,
+  rating TEXT,
+  score NUMERIC,
+  scored_by INTEGER,
+  rank INTEGER,
+  popularity INTEGER,
+  members INTEGER,
+  favorites INTEGER,
+  background TEXT,
+  premiered TEXT,
+  broadcast TEXT,
+  related TEXT,
+  producer TEXT,
+  licensor TEXT,
+  studio TEXT,
+  genre TEXT,
+  opening_theme TEXT,
+  ending_theme TEXT
+);
+COPY anime_list FROM '/anime-list.csv'
+CSV HEADER NULL '';
